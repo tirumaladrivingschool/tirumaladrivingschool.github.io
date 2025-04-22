@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tirumala Motor Driving School | Hyderabad</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background-color: #1a3e72;
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+        
+        .logo h1 {
+            font-size: 24px;
+            font-weight: 700;
+        }
+        
+        .logo span {
+            font-size: 14px;
+            display: block;
+            color: #f8f8f8;
+        }
+        
+        .contact-btn {
+            background-color: #ff6b00;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .contact-btn:hover {
+            background-color: #e05d00;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1502224562085-639556652f33?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        
+        .hero h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .cta-btn {
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .cta-btn.primary {
+            background-color: #ff6b00;
+            color: white;
+        }
+        
+        .cta-btn.secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .cta-btn:hover {
+            transform: translateY(-3px);
+        }
+        
+        /* Courses Section */
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 32px;
+            color: #1a3e72;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background-color: #ff6b00;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .courses {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .course-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 350px;
+            transition: all 0.3s;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .course-card h3 {
+            font-size: 24px;
+            color: #1a3e72;
+            margin-bottom: 15px;
+        }
+        
+        .price {
+            font-size: 28px;
+            font-weight: 700;
+            color: #ff6b00;
+            margin-bottom: 20px;
+        }
+        
+        .features {
+            list-style-type: none;
+        }
+        
+        .features li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .features li::before {
+            content: '✓';
+            color: #4CAF50;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        /* Instructor Section */
+        .instructor {
+            background-color: #1a3e72;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        
+        .instructor-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .instructor h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        
+        .instructor h3 {
+            font-size: 24px;
+            color: #ff6b00;
+            margin-bottom: 15px;
+        }
+        
+        .instructor-contact {
+            margin-top: 30px;
+        }
+        
+        .instructor-contact p {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        /* Why Choose Us */
+        .benefits {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .benefit-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 250px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .benefit-card i {
+            font-size: 40px;
+            color: #ff6b00;
+            margin-bottom: 20px;
+        }
+        
+        .benefit-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #1a3e72;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background-color: #f9f9f9;
+        }
+        
+        .contact-container {
+            display: flex;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .contact-info h3 {
+            font-size: 24px;
+            color: #1a3e72;
+            margin-bottom: 20px;
+        }
+        
+        .contact-details p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .contact-form {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .form-group textarea {
+            height: 120px;
+        }
+        
+        .submit-btn {
+            background-color: #ff6b00;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background-color: #e05d00;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #1a3e72;
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .footer-column h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 2px;
+            background-color: #ff6b00;
+            bottom: 0;
+            left: 0;
+        }
+        
+        .footer-column ul {
+            list-style-type: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: #ff6b00;
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 20px;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: #ff6b00;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 14px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            
+            .hero h2 {
+                font-size: 32px;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .course-card {
+                width: 100%;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <!-- Replace with your actual logo -->
+                <img src="https://via.placeholder.com/50x50" alt="Tirumala Driving School Logo">
+                <div>
+                    <h1>TIRUMALA MOTOR DRIVING SCHOOL</h1>
+                    <span>Your Journey to Safe Driving Starts Here!</span>
+                </div>
+            </div>
+            <a href="#contact" class="contact-btn">Contact Us</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Learn Driving from Experts with 10+ Years of Experience!</h2>
+            <p>Affordable | Professional Training | Free Pickup & Drop | Government-Approved</p>
+            <div class="cta-buttons">
+                <a href="tel:+918143030444" class="cta-btn primary"><i class="fas fa-phone-alt"></i> Call Now</a>
+                <a href="#courses" class="cta-btn secondary"><i class="fas fa-car"></i> View Courses</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="section" id="courses">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Driving Courses</h2>
+            </div>
+            <div class="courses">
+                <div class="course-card">
+                    <h3>With License</h3>
+                    <div class="price">₹8500</div>
+                    <ul class="features">
+                        <li>1 Month Course (26 Classes)</li>
+                        <li>7 KM per Day Training</li>
+                        <li>Free Pickup & Drop</li>
+                        <li>All RTA Works Done</li>
+                        <li>Vehicle: Swift Dzire</li>
+                    </ul>
+                </div>
+                <div class="course-card">
+                    <h3>Without License</h3>
+                    <div class="price">₹4500</div>
+                    <ul class="features">
+                        <li>1 Month Course (26 Classes)</li>
+                        <li>7 KM per Day Training</li>
+                        <li>Free Pickup & Drop</li>
+                        <li>All RTA Works Done</li>
+                        <li>Vehicle: Swift Dzire</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instructor Section -->
+    <section class="instructor">
+        <div class="container instructor-content">
+            <h2>Meet Our Expert Instructor</h2>
+            <h3>Vikram Reddy</h3>
+            <p>With over 10 years of experience in training drivers across Telangana, Vikram Reddy ensures you learn safe and confident driving techniques.</p>
+            <div class="instructor-contact">
+                <p><i class="fas fa-phone-alt"></i> Phone: +91 8143030444</p>
+                <p><i class="fas fa-building"></i> Office: +91 8886858899</p>
+                <p><i class="fas fa-envelope"></i> Email: tirumaladrivingschool8899@gmail.com</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Tirumala Driving School?</h2>
+            </div>
+            <div class="benefits">
+                <div class="benefit-card">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>10+ Years Experience</h3>
+                    <p>Trusted training since 2013</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-car-side"></i>
+                    <h3>Modern Vehicles</h3>
+                    <p>Swift Dzire for comfortable learning</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-rupee-sign"></i>
+                    <h3>Affordable Fees</h3>
+                    <p>Best value for money</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-user-shield"></i>
+                    <h3>Safety First</h3>
+                    <p>Dual control cars for complete safety</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <div class="contact-details">
+                        <p><i class="fas fa-map-marker-alt"></i> 1-10-1/216/85, Rd no. 2, Bhagawan Colony, Hyderabad 500062, TG, India</p>
+                        <p><i class="fas fa-phone-alt"></i> +91 8143030444 (Instructor)</p>
+                        <p><i class="fas fa-phone-alt"></i> +91 8886858899 (Office)</p>
+                        <p><i class="fas fa-envelope"></i> tirumaladrivingschool8899@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="course">Course Interested In</label>
+                            <select id="course">
+                                <option value="with-license">With License (₹8500)</option>
+                                <option value="without-license">Without License (₹4500)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Enquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About Us</h3>
+                    <p>Tirumala Motor Driving School has been providing quality driving education in Hyderabad for over 10 years, helping students become confident and safe drivers.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/918143030444"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Tirumala Motor Driving School. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
